@@ -1,31 +1,41 @@
 {
-  "name": "directory-tree",
-  "version": "2.1.0",
+  "name": "@skymaker/directory-tree",
+  "version": "0.1.0",
   "description": "Convert a directory tree to a JS object.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mihneadb/node-directory-tree"
+    "url": "https://github.com/skymakerstudio/node-directory-tree"
   },
   "keywords": [
     "directory",
     "tree"
   ],
-  "main": "lib/directory-tree.js",
+  "main": "dist/directory-tree.js",
+  "types": "dist/directory-tree.d.ts",
   "author": "Mihnea Dobrescu-Balaur",
+  "contributors": [
+    {
+      "name": "Olof Rappestad",
+      "email": "olof.rappestad@skymaker.se"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mihneadb/node-directory-tree/issues"
+    "url": "https://github.com/skymakerstudio/node-directory-tree/issues"
   },
-  "homepage": "https://github.com/mihneadb/node-directory-tree",
+  "homepage": "https://github.com/skymakerstudio/node-directory-tree",
   "dependencies": {},
   "devDependencies": {
-    "chai": "^2.3.0",
-    "mocha": "^2.2.5"
+    "@types/node": "^10.11.2",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.1.1"
   },
   "engines": {
-    "node": ">=4.2"
+    "node": ">=6"
   },
   "scripts": {
-    "test": "mocha"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   }
 }
